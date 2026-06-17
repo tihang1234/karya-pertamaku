@@ -1,0 +1,251 @@
+:root{
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #d4af37;
+  --card-bg: #1e1e1e;
+}
+html {
+  scroll-behavior:smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang lebih rapi */
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding-bottom: 100px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+.pill-nav {
+  display: flex;
+  padding: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  gap: 10px;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6a7c73;
+  text-decoration: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.nav-item.material-symbols-outlined {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.nav-item.nav-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+.nav-item.active {
+  background-color: #1e3a31;
+  color: #ffffff;
+}
+.nav-item:not(.active):hover {
+background-color: #eef2f0;
+  color: #1e3a31;
+}
+.nav-item:not(.active):active {
+  background-color: #d1dcd7;
+}
+section {
+  padding: 50px 20px;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+#Portofolio div {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+#Portofolio div:hover {
+  transform: translateY(-10px); /* Kartu naik 10 pixel ke atas */
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); /* Bayangan emas tipis muncul */
+}
+
+
+
+#Portofolio img {
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+footer {
+  color: var(--accent-color);
+  text-align: center;
+}
+#Home h1, h2, h3, p {
+  text-align: center;
+}
+#Home, #About {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+#About:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+#Home:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+#Home {
+  animation: fadeInUp 1.5s ease-out;
+}
+#Home h1 {
+  color: var(--accent-color);
+  padding-bottom: 10px;
+}
+#sosmed {
+  width: 40%;
+  padding: 10px;
+  align-items: center;
+}
+.sosial-icon {
+  width: 100%;
+  align-items: center;
+  margin-top: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-tap-highlight-color:transparent;
+}
+#Contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+.whatsapp {
+ background-color: green;
+}
+.facebook {
+  background-color: #3b5998;
+}
+.tiktok {
+  background-color: black;
+}
+.github {
+  background-color: #1e1e1e;
+}
+#sosmed h3 {
+  margin-bottom: 7px;
+}
+.sosial-icon:hover{
+  transform: rotateY(180deg);
+}
+
+.portopolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+#Home video {
+  width:100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  height: 300px;
+  margin-bottom: 15px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto 0;
+  
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: Inherit;
+  font-size: 16px;
+}
+.contact-form button {
+  padding: 12px;
+  background-color: #1e3a31;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+.contact-form button:hover {
+  background-color: #152b24;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width:768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  section {
+    padding: 30px 15px;
+  }
+  #Home h1 {
+    font-size: 24px;
+  }
+}
